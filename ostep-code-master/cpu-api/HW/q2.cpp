@@ -29,5 +29,6 @@ int main() {
             cout << "parent write failed" << endl;
         }
     }
+    close(fd);
     return 0;
 }
