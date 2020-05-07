@@ -16,6 +16,6 @@ int main() {
         read(1, NULL, 0);
     }
     gettimeofday(&end_tv, NULL);
-    cout << "each system call cost: " << end_tv.tv_sec * 1000000 + end_tv.tv_usec - (start_tv.tv_sec * 1000000 +start_tv.tv_usec) << "us" << endl;
+    cout << "each system call cost: " << double(end_tv.tv_sec * 1000000 + end_tv.tv_usec - (start_tv.tv_sec * 1000000 +start_tv.tv_usec)) / n<< "us" << endl;
     return 0;
 }
