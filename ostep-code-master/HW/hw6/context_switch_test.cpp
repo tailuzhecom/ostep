@@ -49,7 +49,7 @@ int main() {
         }
         gettimeofday(&end_tv, NULL);
         cout << "each context switch cost: " << (double)(end_tv.tv_sec * 1000000 + end_tv.tv_usec -
-                (start_tv.tv_sec * 1000000 + start_tv.tv_usec)) / n << "us" << endl;
+                (start_tv.tv_sec * 1000000 + start_tv.tv_usec)) / n / 2 << "us" << endl;
     }
     return 0;
 }
